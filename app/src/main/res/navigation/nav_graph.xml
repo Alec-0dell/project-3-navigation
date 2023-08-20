@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/landerFragment">
+
+    <fragment
+        android:id="@+id/landerFragment"
+        tools:layout="@layout/fragment_lander"
+        android:name="org.overlake.mat803.navigation.LanderFragment"
+        android:label="LanderFragment" >
+        <action
+            android:id="@+id/action_landerFragment_to_yesFragment"
+            app:destination="@id/yesFragment" />
+        <action
+            android:id="@+id/action_landerFragment_to_noFragment"
+            app:destination="@id/noFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yesFragment"
+        tools:layout="@layout/fragment_yes"
+        android:name="org.overlake.mat803.navigation.YesFragment"
+        android:label="YesFragment" >
+        <action
+            android:id="@+id/action_yesFragment_to_landerFragment"
+            app:destination="@id/landerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noFragment"
+        tools:layout="@layout/fragment_no"
+        android:name="org.overlake.mat803.navigation.NoFragment"
+        android:label="NoFragment" >
+        <action
+            android:id="@+id/action_noFragment_to_landerFragment"
+            app:destination="@id/landerFragment" />
+    </fragment>
+</navigation>
